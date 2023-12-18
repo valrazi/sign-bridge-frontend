@@ -9,7 +9,8 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ["vue", "vue-router"],
+      imports: ["vue", "vue-router", "pinia"],
+      dirs: ["./src/store"],
     }),
     Component({
       dirs: ["./src/views/components"],
