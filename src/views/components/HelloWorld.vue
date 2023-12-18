@@ -3,6 +3,8 @@ defineProps<{ msg: string }>()
 
 const { increment } = useCounterStore()
 const { count } = storeToRefs(useCounterStore())
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -16,6 +18,10 @@ const { count } = storeToRefs(useCounterStore())
     </p>
   </div>
 
+  <p>
+    {{ t('hello.message') }}
+  </p>
+  <LanguageChooser />
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
