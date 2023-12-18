@@ -12,7 +12,7 @@ export default defineConfig({
       imports: ["vue"],
     }),
     Component({
-      dirs: ["./src/components"],
+      dirs: ["./src/views/components"],
     }),
   ],
   resolve: {
