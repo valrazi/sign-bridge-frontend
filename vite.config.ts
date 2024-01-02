@@ -15,7 +15,7 @@ export default defineConfig({
       dirs: ["./src/store"],
     }),
     Component({
-      dirs: ["./src/views/components"],
+      dirs: ["./src/components"],
     }),
     VueI18n({
       include: path.resolve(__dirname, "./src/locales/**"),
