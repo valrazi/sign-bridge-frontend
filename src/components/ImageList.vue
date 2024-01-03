@@ -11,8 +11,6 @@ onMounted(async () => {
 
 <template>
   <div class="grid grid-cols-5 gap-5 mt-10">
-    <div v-for="photo in photos" :key="photo.id">
-      <img :src="photo.url" class="rounded-xl" />
-    </div>
+    <ImageListItem v-for="photo in photos" :key="photo.id" :photo="photo" />
   </div>
 </template>
