@@ -4,7 +4,7 @@ import { Photo, apiGetPhotos } from '@/api/photos';
 const photos = ref<Photo[]>([])
 
 onMounted(async () => {
-  const { data } = await apiGetPhotos()
+  const data = await apiGetPhotos()
   photos.value = data
 })
 </script>
