@@ -12,7 +12,7 @@ export default defineConfig({
     vue(),
     AutoImport({
       imports: ["vue", "vue-router", "pinia", "vue-i18n"],
-      dirs: ["./src/store"],
+      dirs: ["./src/store", "./src/api", "./src/composables"],
     }),
     Component({
       dirs: ["./src/components"],
