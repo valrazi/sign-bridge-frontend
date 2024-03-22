@@ -6,5 +6,5 @@ export const useDate = () => {
   const now = () => dayjs();
   const formatDateTime = (date: DateTime) =>
     dayjs(date).format("D MMM YYYY, mm:ss");
-  return { now, formatDateTime };
+  return { now, formatDateTime, dayjs };
 };
