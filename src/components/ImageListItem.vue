@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Photo } from '@/api/photos';
+import { Photo } from '@/types';
 
 defineProps<{
   photo: Photo

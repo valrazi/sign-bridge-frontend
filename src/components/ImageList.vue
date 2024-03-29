@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Photo, apiGetPhotos } from '@/api/photos';
+import { Photo } from '@/types';
 
 const photos = ref<Photo[]>([])
 

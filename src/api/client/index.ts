@@ -5,8 +5,9 @@ type APIRejected = (error: AxiosError) => void;
 
 const api = <T>(payload: AxiosRequestConfig) => {
   return new Promise((resolve: APIResolved<T>, reject: APIRejected) => {
+    const env = import.meta.env;
     const baseClient = axios.create({
-      baseURL: "https://jsonplaceholder.typicode.com",
+      baseURL: env.VITE_API_URL,
       validateStatus: (status: number) => status >= 200 && status < 300,
     });
 
