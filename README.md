@@ -1,18 +1,91 @@
-# Vue 3 + TypeScript + Vite
+# Vue.js Base Project
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern Vue.js base project with TypeScript, Vite, Pinia, Vue Router, and more.
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- ⚡️ [Vue 3](https://vuejs.org/) - Progressive JavaScript Framework
+- 🎯 [TypeScript](https://www.typescriptlang.org/) - Type safety and enhanced IDE support
+- 📦 [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- 🗃️ [Pinia](https://pinia.vuejs.org/) - State management with persistence support
+- 🌍 [Vue I18n](https://vue-i18n.intlify.dev/) - Internationalization
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- 🔄 [Vue Router](https://router.vuejs.org/) - Official router for Vue.js
+- 📡 [Axios](https://axios-http.com/) - Promise based HTTP client
+- 🕒 [Day.js](https://day.js.org/) - Date and time manipulation
+- 🔧 [Auto Import](https://github.com/antfu/unplugin-auto-import) - Auto import components and APIs
+- 🔄 [PM2](https://pm2.keymetrics.io/) - Production process manager
 
-## Type Support For `.vue` Imports in TS
+## Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. Install dependencies:
+```bash
+pnpm install
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+2. Start development server:
+```bash
+pnpm dev
+```
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+3. Build for production:
+```bash
+pnpm build
+```
+
+4. Start production server:
+```bash
+pm2 start ecosystem.config.cjs
+```
+
+## Environment Variables
+
+If you don't have an `.env` file, create a copy from the example (`.env.example`) and set it up.
+
+## Project Configuration
+
+- `vite.config.ts` - Vite configuration
+- `tsconfig.json` - TypeScript configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+- `postcss.config.js` - PostCSS configuration
+- `ecosystem.config.cjs` - PM2 deployment configuration
+
+## Scripts
+
+- `dev` - Start development server
+- `build` - Build for production
+- `preview` - Preview production build
+
+## Directory Structure
+
+```
+.
+├── src/
+│   ├── api/              # API integration files
+│   ├── assets/           # Static assets (images, fonts, etc.)
+│   ├── components/       # Reusable Vue components
+│   ├── composables/      # Vue composition functions
+│   ├── core/            # Core application logic
+│   ├── locales/         # i18n translation files
+│   ├── pages/           # Page components
+│   ├── routes/          # Vue Router configuration
+│   ├── store/           # Pinia store modules
+│   ├── types/           # TypeScript type definitions
+│   ├── App.vue          # Root Vue component
+│   ├── main.ts          # Application entry point
+│   └── vite-env.d.ts    # Vite environment declarations
+├── public/
+│   └── vite.svg         # Public assets
+├── app.cjs              # Application server configuration
+├── auto-imports.d.ts    # Auto-generated imports declaration
+├── components.d.ts      # Auto-generated components declaration
+├── ecosystem.config.cjs # PM2 deployment configuration
+├── index.html          # Entry HTML file
+├── package.json        # Project dependencies and scripts
+├── pnpm-lock.yaml      # PNPM lock file
+├── postcss.config.js   # PostCSS configuration
+├── tailwind.config.js  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration
+├── tsconfig.node.json  # TypeScript Node configuration
+└── vite.config.ts      # Vite configuration
+```
