@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
-import { initRouteGuard, routes } from "@/routes";
+import { initMiddleware, routes } from "@/routes";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -7,6 +7,6 @@ const router = createRouter({
   routes,
 });
 
-initRouteGuard(router);
+initMiddleware(router);
 
 export default router;

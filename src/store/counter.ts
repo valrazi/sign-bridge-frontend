@@ -15,4 +15,5 @@ export const useCounterStore = defineStore("counter", {
       this.count = initialState.count;
     },
   },
+  persist: true,
 });
