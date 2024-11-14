@@ -1,3 +1,6 @@
+<script setup lang="ts">
+import Wrapper from '@/components//Wrapper.vue'
+</script>
 <template>
-  <RouterView />
+  <Wrapper />
 </template>

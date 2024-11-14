@@ -1,5 +1,5 @@
 {
-  "name": "vuejs-base-project",
+  "name": "tixfly-widget",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,15 +9,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
     "axios": "^1.7.7",
     "compression": "^1.7.5",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "flowbite": "^2.5.2",
+    "flowbite-vue": "^0.1.6",
     "path": "^0.12.7",
     "pinia": "^2.2.6",
     "pinia-plugin-persistedstate": "^4.1.2",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vue": "^3.5.12",
     "vue-i18n": "^10.0.4",
     "vue-router": "^4.4.5"

@@ -8,6 +8,9 @@ const app = express();
 app.use(compress());
 app.use(express.static(path.join(__dirname, 'dist'), { maxAge: 0 }));
 
+app.get("/sdk.js", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/assets/sdk.js"));
+})
 app.get('*', (_, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
