@@ -1,14 +1,5 @@
-export type Photo = {
-  albumId: number;
-  id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
-  album: Album;
-};
-
-export type Album = {
-  userId: number;
-  id: number;
-  title: string;
-};
+export * from './common'
+export * from './user'
+export * from './video-learning'
+export * from './blog'
+export * from './calendars'

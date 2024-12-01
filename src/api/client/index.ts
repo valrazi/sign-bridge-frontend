@@ -12,6 +12,8 @@ const api = <T>(payload: AxiosRequestConfig) => {
     });
 
     baseClient.interceptors.request.use((config) => {
+      const { token } = useAuthStore();
+      if (token) config.headers.Authorization = `bearer ${token}`;
       return config;
     });
 
@@ -20,6 +22,9 @@ const api = <T>(payload: AxiosRequestConfig) => {
         return response;
       },
       (error: AxiosError) => {
+        if (error.status == 401) {
+          useAuthStore().logout();
+        }
         return Promise.reject(error);
       }
     );

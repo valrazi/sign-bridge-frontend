@@ -1,19 +1,36 @@
 const initialState = {
-  count: 0,
+  isModal: false,
+  logoutModal: false,
+  unauthorizedModal: false,
+  adminSidebar: false
 };
 
-export const useCounterStore = defineStore("counter", {
+export const useUserStore = defineStore("user", {
   state: () => initialState,
   actions: {
-    increment() {
-      this.count++;
+    showModal() {
+      this.isModal = true
     },
-    decrement() {
-      this.count--;
+    hideModal() {
+      this.isModal = false
     },
-    reset() {
-      this.count = initialState.count;
+    showLogout() {
+      this.logoutModal = true
     },
+    hideLogout() {
+      this.logoutModal = false
+    },
+    showUnauthorized() {
+      this.unauthorizedModal = true
+    },
+    hideUnauthorized() {
+      this.unauthorizedModal = false
+    },
+    showAdminSidebar() {
+      this.adminSidebar = true
+    },
+    hideAdminSidebar() {
+      this.adminSidebar = false
+    }
   },
-  persist: true,
 });
